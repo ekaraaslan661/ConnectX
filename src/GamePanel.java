@@ -51,11 +51,11 @@ public class GamePanel extends JPanel implements KeyListener, MouseListener
 		g2.setTransform(at);
 
 		for(int i = 0; i <= 6; i++) {
-			g.drawLine((int) (width / 6.0 * i),(int) (25 + height / 7.0), (int) (width - width / 6.0 * i), (int) (25 + height / 7.0));
+			g.drawLine((int) (width / 6.0),(int) (height / 7.0 * i), (int) (width - width / 6.0), (int) (height / 7.0 * i));
 		}
 		
 		for(int i = 0; i <= 7; i++) {
-			g.drawLine((int) (width / 6.0 * i),(int) (height / 7.0), (int) (width - width / 6.0 * i), (int) (height / 7.0));
+			g.drawLine((int) ,(int) , (int) , (int) );
 		}
 
 		for(int i = 0; i < board.length; i++) {
