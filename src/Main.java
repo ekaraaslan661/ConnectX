@@ -3,11 +3,20 @@ import java.awt.Color;
 
 import javax.swing.JFrame;
 import javax.swing.JPanel;
-
+/**
+ * Holds the main method and other characteristics of the project
+ * @author ekaraaslan661
+ *
+ */
 public class Main extends JFrame{
-
-private JPanel cardPanel;
+//Make a 2D array in GamePanel that holds tiles. Tiles will be another class and those hold a value
+// that is either 0,1,2. According to each click it will drop a tile into the space and the board will fill up
 	
+private JPanel cardPanel;
+	/**
+	 * Holds the characteristics of the Main class
+	 * @param title This represents the name of the window
+	 */
 	public Main(String title) {
 		super(title);
 		setBounds(100, 100, 800, 600);
@@ -34,7 +43,10 @@ private JPanel cardPanel;
 	{
 		Main w = new Main("ConnectX");
 	}
-  
+  /**
+   * This method changes the panel according to what cardPanel holds
+   * @param name the name of the panel
+   */
 	public void changePanel(String name) {
 		((CardLayout)cardPanel.getLayout()).show(cardPanel,name);
 		requestFocus();

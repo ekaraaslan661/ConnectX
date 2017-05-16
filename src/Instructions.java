@@ -7,19 +7,29 @@ import java.awt.event.KeyListener;
 import java.awt.geom.AffineTransform;
 
 import javax.swing.JPanel;
-
+/**
+ * This class represents the instructions to the game
+ * @author ekaraaslan661
+ *
+ */
 public class Instructions extends JPanel implements KeyListener{
 
 	private String message;
 	private Main m;
-
+/**
+ * Holds the contents of the instructions
+ * @param m a reference to Main
+ */
 	public Instructions (Main m) {
 		super();
 		this.m = m;
 		setBackground(Color.WHITE);
 		message = "I'll put the instructions later. Lolmao";
 	}
-	
+	/**
+	 * This class does everything that involves the graphical component of the screen
+	 * @param g A graphics object that is utilized to use the functions of the Graphics class
+	 */
 	public void paintComponent(Graphics g)
 	{
 		super.paintComponent(g);  // Call JPanel's paintComponent method to paint the background
@@ -45,7 +55,10 @@ public class Instructions extends JPanel implements KeyListener{
 		// TODO Add any custom drawings here
 	}
 
-
+	/**
+	 * This method tests for if a key was pressed and helps to determine what to do next
+	 * @param arg0 Represents the KeyEvent to be checked against
+	 */
 	@Override
 	public void keyPressed(KeyEvent arg0) {
 		if (arg0.getKeyCode() == KeyEvent.VK_ESCAPE) {
